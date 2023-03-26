@@ -1,0 +1,48 @@
+@mixin  gridlayout($row:1, $justify-items:unset, $align-items:unset){
+    display: grid;
+    grid-template-columns: repeat(12,90px);
+    grid-template-rows: repeat($row, 100px);
+    gap:20px;
+    justify-items:$justify-items ;
+    align-items:$align-items ;
+}
+@mixin gridcontainer($row: 100px, $justify-items:unset, $align-items:unset){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: $row;
+    gap:20px;
+    justify-items:$justify-items ;
+    align-items:$align-items ;
+}
+
+@mixin gridcard( $col1, $col2, $col3, $col4 , $justify-items:unset,$align-items:unset, $bg-color:$highlight1-color ){
+    display: grid;
+    grid-template-columns: 1fr;  
+    grid-template-rows: $col1 $col2 $col3 $col4 ;  
+    gap:20px;
+    justify-items:$justify-items ;
+    align-items:$align-items ;
+    background-color: $bg-color;
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded;
+    
+}
+
+@mixin gridchild($col1:1, $col2:1, $row1:1, $row2:2,$justify-self:unset, $align-self:unset){
+    grid-column-start: $col1;
+    grid-column-end: $col2;
+    grid-row-start: $row1;
+    grid-row-end: $row2;
+    justify-self: $justify-self;
+    align-self: $align-self;
+}
+
+
+@mixin gridcontainer4($row: 100px, $justify-items:unset, $align-items:unset){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: $row;
+    gap:20px;
+    justify-items:$justify-items ;
+    align-items:$align-items ;
+}

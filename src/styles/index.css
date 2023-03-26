@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.root-layout {
+  margin: 40px auto 0 auto;
+  max-width: 1300px;
+}
+
+.header-component {
+  display: grid;
+  grid-template-columns: repeat(12, 90px);
+  grid-template-rows: repeat(1, 100px);
+  gap: 20px;
+  justify-items: unset;
+  align-items: center;
+}
+.header-component a {
+  max-width: 200px;
+  max-height: 80px;
+  grid-column: 3/5;
+}
+.header-component nav ul {
+  font-size: 20px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  grid-column: 5/10;
+  display: flex;
+  gap: 34px;
+  list-style-type: none;
+  font-weight: bold;
+}
+.header-component li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.header-component a.active {
+  background-color: rgb(244, 206, 20);
+  border-radius: 8px;
+  color: rgb(73, 94, 87);
+  padding: 8px;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(12, 90px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+  background-color: rgb(73, 94, 87);
+}
+.hero-section img {
+  grid-column-start: 7;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: end;
+  align-self: unset;
+  width: 280px;
+  height: 320px;
+  margin-top: 20px;
+  border-radius: 16px;
+  transition: 5s;
+}
+.hero-section img:hover {
+  transform: scale(1.1);
+}
+.hero-section .hero-container {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  justify-self: unset;
+  align-self: unset;
+}
+.hero-section .heading p:nth-of-type(1) {
+  font-size: 64px;
+  font-family: "Markazi Text", serif;
+  color: rgb(244, 206, 20);
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.hero-section .heading p:nth-of-type(2) {
+  font-size: 40px;
+  font-family: "Markazi Text", serif;
+  color: rgb(255, 255, 255);
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.hero-section div p:nth-of-type(2) {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 0px 0px;
+  margin: 0px 0px;
+  margin-bottom: 10px;
+}
+.hero-section button {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: rgb(244, 206, 20);
+  margin: 20px 0;
+  padding: 10px 25px;
+  border-radius: 16px;
+  border: none;
+}
+.hero-section button:hover {
+  background-color: #f6d845;
+  color: rgb(255, 255, 255);
+  transform: scale(0.9);
+}
+.hero-section button:visited {
+  color: rgb(180, 0, 0);
+}
+
+.special-section {
+  display: grid;
+  grid-template-columns: repeat(12, 90px);
+  grid-template-rows: repeat(7, 100px);
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+}
+.special-section .special-container {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: unset;
+  align-self: unset;
+  display: flex;
+  justify-content: space-between;
+}
+.special-section .special-container h1 {
+  font-size: 40px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  font-weight: 700;
+}
+.special-section .special-container button {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: rgb(244, 206, 20);
+  margin: 0 0;
+  padding: 10px 25px;
+  border-radius: 16px;
+  border: none;
+  align-self: self-start;
+}
+.special-section .special-container button:hover {
+  background-color: #f6d845;
+  color: rgb(255, 255, 255);
+  transform: scale(0.9);
+}
+.special-section .special-card {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  justify-self: unset;
+  align-self: unset;
+}
+.special-section .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 500px;
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+}
+.special-section .cards a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 1s;
+}
+.special-section .cards a:hover {
+  transform: scale(1.1);
+}
+.special-section .cards img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.special-section .card-details {
+  font-size: 16px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.special-section .card-details h3:nth-of-type(2) {
+  color: rgb(238, 153, 114);
+}
+.special-section .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 30px 180px 30px;
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+  background-color: rgb(237, 239, 238);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  filter: drop-shadow(4px 4px 3px rgb(51, 51, 51));
+}
+.special-section .card p {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  line-height: 1.5;
+  margin: 0 20px;
+}
+.special-section .order {
+  margin: 0 20px;
+}
+
+.testimonial-section {
+  display: grid;
+  grid-template-columns: repeat(12, 90px);
+  grid-template-rows: repeat(5, 100px);
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+}
+.testimonial-section .testimonial-container {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify-self: center;
+  align-self: center;
+  font-size: 30px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.testimonial-section .testimonial-card {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  justify-self: unset;
+  align-self: unset;
+}
+.testimonial-section .testimonial-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px;
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+}
+.testimonial-section .testimonial-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 100px 160px 30px;
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+  background-color: rgb(237, 239, 238);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  filter: drop-shadow(4px 4px 3px rgb(51, 51, 51));
+}
+.testimonial-section .testimonial-cards img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 10px;
+  justify-self: center;
+  align-self: center;
+}
+.testimonial-section .testimonial-cards h3 {
+  font-size: 18px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  justify-self: center;
+  align-self: center;
+}
+.testimonial-section .testimonial-cards p, .testimonial-section .testimonial-cards h4 {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  line-height: 1.5;
+  margin: 0 20px;
+}
+
+.footer-section {
+  display: grid;
+  grid-template-columns: repeat(12, 90px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+  background-color: rgb(238, 153, 114);
+}
+.footer-section .footer-container {
+  grid-column-start: 3;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: unset;
+  align-self: unset;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  gap: 20px;
+  justify-items: unset;
+  align-items: unset;
+}
+.footer-section .footer-container img {
+  width: 100%;
+  height: 80px;
+  align-self: center;
+}
+.footer-section .footer-container h3 {
+  font-size: 20px;
+  font-family: "Markazi Text", serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.footer-section .footer-container p {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.footer-section .footer-container a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.footer-section .footer-container li {
+  list-style-type: none;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: black;
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+.footer-section .footer-container .footer-doormat {
+  align-self: center;
+  justify-self: center;
+}
+.footer-section .footer-container .footer-contact {
+  align-self: center;
+  justify-self: center;
+}
+.footer-section .footer-container .footer-social {
+  align-self: center;
+  justify-self: center;
+}/*# sourceMappingURL=index.css.map */

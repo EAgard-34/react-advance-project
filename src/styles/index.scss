@@ -1,0 +1,235 @@
+@import 'variables';
+@import 'base';
+@import 'button';
+@import 'grid-layout';
+@import 'image';
+@import 'utilities';
+
+// Little Lemon Website styles
+
+// root layout router wrapper element
+.root-layout{
+    margin: 40px auto 0 auto;
+    max-width: 1300px;   
+}
+
+// navbar componenet
+.header-component{
+    @include gridlayout(1,unset,center);
+    a{
+        max-width: 200px;
+        max-height:80px;
+        grid-column: 3/5;        
+    }
+    nav ul{
+       @include typeface($lead-text, $Markazi);
+       grid-column:5/10;
+       display: flex;
+       gap:34px;
+       list-style-type: none;
+       font-weight: bold;
+    }
+    li a{
+        text-decoration: none;
+        color:$black;
+        }
+    a.active{
+        background-color: $primary2-color;
+        border-radius: 8px;
+        color:$primary1-color;
+        padding: 8px;
+    }
+    // a:hover{
+    //    @include hover($primary2-color, $white);
+    //    border-radius: 8px;
+    // }
+}
+
+// hero-section component
+.hero-section{
+    @include gridlayout(2);
+    background-color: $primary1-color;
+    img{
+        @include gridchild(7,10,1,3,end);
+        @include image(280px,320px);
+        margin-top: 20px;
+        border-radius: 16px;
+        transition: 5s;
+        &:hover{
+            transform:scale(1.1);
+        }
+    }
+    .hero-container{
+        @include gridchild(3,7,1,4)
+    }
+    .heading p:nth-of-type(1){
+        @include typeface($display-title, $Markazi, $primary2-color);
+    }
+    .heading p:nth-of-type(2){
+        @include typeface($sub-title,$Markazi,$white);
+    }
+    div p:nth-of-type(2){
+        @include typeface($paragraph-text,$Karla,$white);
+        margin-bottom: 10px;
+    }
+    button{
+       @include btn($primary2-color,20px);
+    &:hover{
+       @include hover();  
+    }
+    }
+    button{
+        &:visited{
+            @include visited();
+        }
+    }
+
+}
+
+// special-section component
+.special-section{
+    @include gridlayout(7);
+    .special-container{
+        @include gridchild(3,10,2,2);
+        display: flex;
+        justify-content: space-between;
+
+    h1{
+        @include typeface($sub-title,$Markazi);
+        font-weight: 700;
+        }
+    button{
+        @include btn();
+        align-self: self-start;
+        &:hover{
+            @include hover();
+        }
+    }
+    }
+    .special-card{
+        @include gridchild(3,10,3,7);
+    }
+    .cards{
+        @include gridcontainer(500px);
+    a{
+        text-decoration: none;
+        color:$black;
+        transition: 1s;
+        &:hover{
+           transform: scale(1.1);
+        }
+    }
+    img{
+        @include image(100%,200px);
+        border-top-left-radius: $rounded;
+        border-top-right-radius: $rounded;
+    }
+    }
+    .card-details{
+        @include typeface($paragraph-text,$Markazi);
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+    h3:nth-of-type(2){
+        color:$secondary1-color;
+    }    
+    }
+    .card{
+        @include gridcard(200px,30px,180px,30px);
+        filter:drop-shadow(4px 4px 3px $highlight2-color);
+    p{
+        @include typeface($paragraph-text,$Karla);
+        line-height: 1.5;
+        margin: 0 20px;
+    }
+    }
+    .order{
+        margin: 0 20px;
+    }    
+    }
+
+// testimonial-section component
+.testimonial-section{
+    @include gridlayout(5);
+    .testimonial-container{
+        @include gridchild(3,10,1,1,center,center);
+        @include typeface($section-title, $Markazi);
+    }
+    .testimonial-card{
+        @include gridchild(3,10,2,4);
+    }
+    .testimonial-card-body{
+        @include gridcontainer(400px);
+    }
+    
+    .testimonial-cards{
+        @include gridcard(40px,100px,160px,30px);
+        filter:drop-shadow(4px 4px 3px $highlight2-color);
+    img{
+        @include image(120px, 120px);
+        border-radius: 50%;
+        padding: 10px;
+        justify-self: center;
+        align-self: center;
+    }
+    h3{
+        @include typeface($card-title, $Markazi);
+        justify-self: center;
+        align-self: center;
+    }
+    p, h4{
+        @include typeface($paragraph-text, $Karla);
+        line-height: 1.5;
+        margin: 0 20px;
+    }
+    
+    }
+}
+
+// footer-section component
+.footer-section{
+    @include gridlayout(2);
+    background-color: $secondary1-color;
+   
+    .footer-container{
+        @include gridchild(3,10,1,3);
+        @include gridcontainer4(220px);
+     
+        img{
+            @include image(100%,80px);
+            // border: 1px solid white;
+            align-self: center;
+        }
+        h3{
+            @include typeface($lead-text, $Markazi);
+        }
+        p{
+            @include typeface($paragraph-text,$Karla);                              
+        }
+        a{           
+            text-decoration: none;
+            color:$white;            
+        }
+        li{            
+            list-style-type: none;
+            @include typeface($paragraph-text,$Karla);
+        }
+        .footer-doormat {
+            // @include gridcard(0px,30px,50px,0px);
+            align-self: center;
+            justify-self: center;
+        }
+        .footer-contact{
+            align-self: center;
+            justify-self: center;
+        }
+        .footer-social{
+            align-self: center;
+            justify-self: center;
+        }
+
+    
+}
+
+}
+

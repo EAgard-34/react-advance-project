@@ -1,0 +1,17 @@
+@mixin btn($btn-color:$primary2-color, $margin1:0,$margin2:0){
+    font-size: $paragraph-text;
+    font-family: $Karla;
+    background-color: $btn-color;    
+    margin: $margin1 $margin2 ;
+    padding: 10px 25px;
+    border-radius: 16px;
+    border:none;
+}
+@mixin visited($color:$error){
+    color:$color;
+}
+@mixin hover($hover-color:$primary2-color, $color:$white){
+    background-color: lighten($hover-color,10);
+    color:$color;
+    transform: scale(0.9);
+}

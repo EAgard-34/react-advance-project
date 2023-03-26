@@ -1,0 +1,7 @@
+@mixin typeface($fontsize:16px, $fontstyle:$Karla, $color:black, $ptb:0px, $plr:0px, $mtb:0px, $mlr:0px ){
+    font-size: $fontsize;
+    font-family: $fontstyle;
+    color: $color;
+    padding: $ptb $plr ;
+    margin: $mtb $mlr;
+}
